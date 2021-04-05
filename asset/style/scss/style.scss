@@ -1,0 +1,57 @@
+
+
+
+ $indicator-width : 400px;
+.l-indicator{
+
+   
+
+    height: 8px;
+    width: $indicator-width;
+    border-radius: 4px;
+
+    background-color: #788087 ;
+
+    position: relative;
+
+    overflow: hidden;
+
+    .l-indicator-track{
+
+
+        $width : 0.4 * $indicator-width;
+        height: 100%;
+        width: $width;
+
+        background-color: #00edde;
+        position: absolute;
+        top: 0px;
+
+
+       animation-name: l-indicator-anim;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+
+
+        transition: all 1s;
+
+
+
+        @keyframes l-indicator-anim{
+            0%{
+                left : -( $width/2 );
+            }
+            100%{
+                left: 100% - 20%   ;
+            }
+        }
+    }
+
+
+
+}
+
+
